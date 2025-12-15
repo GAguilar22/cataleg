@@ -7,17 +7,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!--
-            he modificat el if tal i com posa a l'enunciat pero em deixa veure igualment el index encara que l'usuari no estigui identificat
-            Perque??
-            TODO Preguntar al Didac pel pas 2-12
-            Esta relacionat amb el pas 2-10
-        -->
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             @if(Auth::check())
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item {{ Request::is('catalog') && !Request::is('catalog/create') ? 'active' : ''}}">
-                        <a class="nav-link" href="{{url('/catalog')}}">
+                        <a class="nav-link" href="{{url('/catalog/index')}}">
                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
                             Cataleg
                         </a>
@@ -42,7 +37,7 @@
                                 {{ __('Profile') }}
                             </a>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                       document.getElementById('logout-form').submit();">
+                                                               document.getElementById('logout-form').submit();">
                                 {{ __('Log Out') }}
                             </a>
 
