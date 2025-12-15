@@ -41,7 +41,7 @@ class CatalegController extends Controller
       $pelicula->save();
 
       $peliculas = Movie::all();
-      return redirect()->route('/catalog');
+      return redirect()->route('catalog.index');
     }
 
     /**
