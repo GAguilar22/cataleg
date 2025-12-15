@@ -38,7 +38,7 @@
                 Borrar pel·lícula
             </a>
 
-            <a href="{{ url('/catalog') }}" class="btn btn-secondary">Torna al llistat</a>
+            <a href="{{ url('/catalog/index') }}" class="btn btn-secondary">Torna al llistat</a>
         </div>
     </div>
 
