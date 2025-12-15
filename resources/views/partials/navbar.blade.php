@@ -2,7 +2,8 @@
     <div class="container">
         <a class="navbar-brand" href="/" style="color:#777"><span style="font-size:15pt">&#9820;</span> Videoclub</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -13,17 +14,17 @@
             Esta relacionat amb el pas 2-10
         -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                @if(Auth::check())
+            @if(Auth::check())
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item {{ Request::is('catalog') && ! Request::is('catalog/create')? 'active' : ''}}">
+                    <li class="nav-item {{ Request::is('catalog') && !Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/catalog')}}">
                             <span class="glyphicon glyphicon-film" aria-hidden="true"></span>
-                            Catálogo
+                            Cataleg
                         </a>
                     </li>
                     <li class="nav-item {{  Request::is('catalog/create') ? 'active' : ''}}">
                         <a class="nav-link" href="{{url('/catalog/create')}}">
-                            <span>&#10010</span> Nueva película
+                            <span>&#10010</span> Nueva Película
                         </a>
                     </li>
                 </ul>
@@ -31,7 +32,8 @@
                 <ul class="navbar-nav ms-auto">
                     <!-- Authentication Links -->
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{Auth::user()->name}}
                         </a>
 
@@ -39,9 +41,8 @@
                             <a class="dropdown-item" href="{{ route('profile.edit') }}">
                                 {{ __('Profile') }}
                             </a>
-                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                       document.getElementById('logout-form').submit();">
                                 {{ __('Log Out') }}
                             </a>
 
@@ -51,8 +52,8 @@
                         </div>
                     </li>
                 </ul>
-               
-                @endif
-            </div>
+
+            @endif
+        </div>
     </div>
 </nav>
